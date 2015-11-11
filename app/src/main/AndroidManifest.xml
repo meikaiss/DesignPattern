@@ -17,6 +17,7 @@
         </activity>
 
         <activity android:name=".CalculaterActivity" />
+        <activity android:name=".StrategyActivity" />
     </application>
 
 </manifest>

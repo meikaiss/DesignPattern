@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ListView listView;
 
-    private Class<?>[] activityClsArr = {CalculaterActivity.class};
-    private String[] patternNameArr = {"简单工厂模式"};
+    private Class<?>[] activityClsArr = {CalculaterActivity.class, StrategyActivity.class};
+    private String[] patternNameArr = {"简单工厂模式", "策略模式"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

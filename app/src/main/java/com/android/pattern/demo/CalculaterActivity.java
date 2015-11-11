@@ -13,6 +13,7 @@ import com.android.pattern.libcalculater.OperatonFactory;
 
 /**
  * Created by meikai on 15/11/9.
+ * 简单工厂
  */
 public class CalculaterActivity extends Activity implements View.OnClickListener {
 
@@ -74,6 +75,7 @@ public class CalculaterActivity extends Activity implements View.OnClickListener
             default:
                 break;
         }
+
     }
 
 }

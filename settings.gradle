@@ -1,1 +1,1 @@
-include ':app', ':libcalculater'
+include ':app', ':libcalculater', ':libstrategy'
