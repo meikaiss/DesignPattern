@@ -5,8 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.android.pattern.demo.R;
 import com.android.pattern.libcalculater.Operation;
 import com.android.pattern.libcalculater.OperatonFactory;
 
@@ -40,14 +40,20 @@ public class CalculaterActivity extends Activity implements View.OnClickListener
     }
 
     private void onClickHandler1(View v){
-        Operation operation = null;
-        int result = 0;
-        operation = OperatonFactory.createOperation(((Button) v).getText().toString());
-        operation.setNumber1(Integer.parseInt(edtOp1.getText().toString()));
-        operation.setNumber2(Integer.parseInt(edtOp2.getText().toString()));
-        result = operation.operat();
 
-        edtResult.setText(String.valueOf(result));
+        try {
+            Operation operation = null;
+            int result = 0;
+            operation = OperatonFactory.createOperation(((Button) v).getText().toString());
+            operation.setNumber1(Integer.parseInt(edtOp1.getText().toString()));
+            operation.setNumber2(Integer.parseInt(edtOp2.getText().toString()));
+            result = operation.operat();
+
+            edtResult.setText(String.valueOf(result));
+        }catch (Exception e){
+            Toast.makeText(this, "请填写正确的数据", Toast.LENGTH_SHORT).show();
+        }
+
     }
 
     private void onClickHandler2(View v){
