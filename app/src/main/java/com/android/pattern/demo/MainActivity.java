@@ -12,6 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.pattern.decorator.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(this);
+
+        Test t = new Test();
+        t.testDecorator();
     }
 
     private List<String> arr2List(Class[] activityNameArr) {
