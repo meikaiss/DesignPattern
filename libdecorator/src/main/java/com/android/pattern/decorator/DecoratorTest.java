@@ -1,11 +1,13 @@
 package com.android.pattern.decorator;
 
+import java.util.List;
+
 /**
  * Created by meikai on 15/11/15.
  */
-public class Test {
+public class DecoratorTest {
 
-    public void testDecorator(){
+    public void testDecorator(List<String> decoratorList){
 
         Person person = new Person("梅凯");
 
@@ -16,7 +18,7 @@ public class Test {
         trouserDecorator.decorate(tShirtDecorator);
 
 
-        trouserDecorator.show();
+        trouserDecorator.show(decoratorList);
     }
 
 

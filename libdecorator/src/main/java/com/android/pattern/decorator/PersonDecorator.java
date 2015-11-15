@@ -1,5 +1,7 @@
 package com.android.pattern.decorator;
 
+import java.util.List;
+
 /**
  * Created by meikai on 15/11/15.
  */
@@ -13,9 +15,9 @@ public abstract class PersonDecorator extends Person {
     }
 
     @Override
-    public void show() {
+    public void show(List<String> decoratorList) {
         if (person!=null)
-            person.show();
+            person.show(decoratorList);
     }
 
 }

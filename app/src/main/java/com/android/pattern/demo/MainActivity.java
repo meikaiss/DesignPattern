@@ -12,8 +12,6 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.pattern.decorator.Test;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +19,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ListView listView;
 
-    private Class<?>[] activityClsArr = {CalculaterActivity.class, StrategyActivity.class};
-    private String[] patternNameArr = {"简单工厂模式", "策略模式"};
+    private Class<?>[] activityClsArr = {CalculaterActivity.class, StrategyActivity.class, DecoratorActivity.class};
+    private String[] patternNameArr = {"简单工厂模式", "策略模式", "装饰模式"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +34,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         listView.setOnItemClickListener(this);
 
-        Test t = new Test();
-        t.testDecorator();
     }
 
     private List<String> arr2List(Class[] activityNameArr) {
