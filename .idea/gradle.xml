@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libcalculater" />
             <option value="$PROJECT_DIR$/libdecorator" />
+            <option value="$PROJECT_DIR$/libproxy" />
             <option value="$PROJECT_DIR$/libstrategy" />
           </set>
         </option>
