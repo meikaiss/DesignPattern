@@ -19,6 +19,7 @@
         <activity android:name=".CalculaterActivity" />
         <activity android:name=".StrategyActivity" />
         <activity android:name=".DecoratorActivity" />
+        <activity android:name=".ProxyActivity" />
     </application>
 
 </manifest>

@@ -1,5 +1,9 @@
 package com.android.pattern.proxy;
 
+import android.util.Log;
+
+import java.util.List;
+
 import javax.security.auth.Subject;
 
 /**
@@ -8,7 +12,9 @@ import javax.security.auth.Subject;
 public class RealSubject implements ISubject {
 
     @Override
-    public void request() {
+    public void request(List<String> list) {
+        list.add("真实主体执行内务处理");
+        Log.e("RealSubject", "真实主体执行内务处理");
 
     }
 

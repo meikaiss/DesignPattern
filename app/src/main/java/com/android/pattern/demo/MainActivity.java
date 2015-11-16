@@ -15,12 +15,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private ListView listView;
 
-    private Class<?>[] activityClsArr = {CalculaterActivity.class, StrategyActivity.class, DecoratorActivity.class};
-    private String[] patternNameArr = {"简单工厂模式", "策略模式", "装饰模式"};
+    private Class<?>[] activityClsArr = {CalculaterActivity.class, StrategyActivity.class, DecoratorActivity.class,
+            ProxyActivity.class};
+    private String[] patternNameArr = {"简单工厂模式", "策略模式", "装饰模式",
+            "代理模式"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         startActivity(new Intent(MainActivity.this, activityClsArr[position]));
     }
 
-    private static class DemoListAdapter extends BaseAdapter{
+    private static class DemoListAdapter extends BaseAdapter {
 
         private Context context;
         private Class<?>[] activityClsArr;
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder;
-            if(convertView == null){
+            if (convertView == null) {
                 convertView = LayoutInflater.from(context).inflate(R.layout.main_list_item, parent, false);
                 new ViewHolder(convertView);
             }
@@ -95,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return convertView;
         }
 
-        private class ViewHolder{
+        private class ViewHolder {
             public TextView activityNameTV;
             public TextView patternNameTV;
 
